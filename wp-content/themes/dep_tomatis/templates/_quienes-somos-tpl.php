@@ -1,11 +1,10 @@
 <?php
 
 /*
-  Template Name: Contacto Template
+  Template Name: Quienes somos Template
 */
 
 	get_template_part('includes/header');
 
-		get_template_part('includes/contacto/formulario');
 
 	get_template_part('includes/footer');
