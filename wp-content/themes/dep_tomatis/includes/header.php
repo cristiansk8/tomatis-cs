@@ -38,7 +38,6 @@
                 'walker'            => new wp_bootstrap_navwalker())
             );
         ?>
-        <?php get_template_part('includes/navbar-search'); ?>
         <?php
             wp_nav_menu( array(
                 'theme_location'    => 'navbar-right',

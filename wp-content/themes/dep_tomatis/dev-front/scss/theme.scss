@@ -1,0 +1,71 @@
+@charset "UTF-8";
+
+// ------------------------ //
+// -- Commons -- //
+// ------------------------ //
+@import 'commons/fonts';
+@import 'commons/variables';
+@import 'commons/mixins';
+@import 'commons/general';
+@import 'commons/header';
+@import 'commons/footer';
+@import 'commons/pagination';
+
+// -- Vendors -- //
+@import 'vendors/slick/slick';
+@import 'vendors/leaflet/core';
+@import 'vendors/leaflet/custom-theme';
+
+
+// ------------------------ //
+// -- Loops -- //
+// ------------------------ //
+@import 'loops/posts-home';
+@import 'loops/press-loop';
+@import 'loops/research-loop';
+@import 'loops/posts-magazines';
+@import 'loops/galleries';
+@import 'loops/videos';
+
+// ------------------------ //
+// -- Blocks -- //
+// ------------------------ //
+@import 'blocks/general/header-titles';
+@import 'blocks/general/panel';
+@import 'blocks/general/forms';
+@import 'blocks/general/top-filter';
+@import 'blocks/general/articles';
+
+@import 'blocks/home/slider';
+@import 'blocks/home/event';
+@import 'blocks/home/numbers';
+@import 'blocks/home/timeline';
+
+@import 'blocks/gremio/about';
+@import 'blocks/gremio/corporate';
+@import 'blocks/gremio/directives';
+@import 'blocks/gremio/statutes';
+@import 'blocks/gremio/logos';
+
+@import 'blocks/research/hero';
+@import 'blocks/research/files';
+
+@import 'blocks/box/top-content';
+@import 'blocks/box/services';
+@import 'blocks/box/location';
+
+@import 'blocks/giass/top-content';
+@import 'blocks/giass/bottom-content';
+@import 'blocks/giass/brochure';
+
+
+// ------------------------ //
+// -- Pages -- //
+// ------------------------ //
+@import 'pages/en-caja';
+@import 'pages/contact';
+@import 'pages/research';
+@import 'pages/directives';
+
+//singles
+@import 'pages/single-gallery';
