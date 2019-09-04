@@ -23,7 +23,7 @@
 @import 'loops/posts-home';
 @import 'loops/press-loop';
 @import 'loops/research-loop';
-@import 'loops/posts-magazines';
+@import 'loops/areas';
 @import 'loops/galleries';
 @import 'loops/videos';
 
@@ -37,15 +37,17 @@
 @import 'blocks/general/articles';
 
 @import 'blocks/home/slider';
-@import 'blocks/home/event';
-@import 'blocks/home/numbers';
-@import 'blocks/home/timeline';
+@import 'blocks/home/bl-info';
 
-@import 'blocks/gremio/about';
-@import 'blocks/gremio/corporate';
-@import 'blocks/gremio/directives';
-@import 'blocks/gremio/statutes';
-@import 'blocks/gremio/logos';
+@import 'blocks/quienes-somos/banner';
+@import 'blocks/quienes-somos/info';
+@import 'blocks/quienes-somos/equipo';
+
+@import 'blocks/contacto/formulario';
+@import 'blocks/contacto/info';
+
+@import 'blocks/areas/bannerAreas';
+
 
 @import 'blocks/research/hero';
 @import 'blocks/research/files';
@@ -54,9 +56,7 @@
 @import 'blocks/box/services';
 @import 'blocks/box/location';
 
-@import 'blocks/giass/top-content';
-@import 'blocks/giass/bottom-content';
-@import 'blocks/giass/brochure';
+
 
 
 // ------------------------ //

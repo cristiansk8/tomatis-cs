@@ -431,7 +431,7 @@
 		},
 
 		ponentsCarousel: function() {
-			let eventWrapper = $('.event-ponents');
+			let eventWrapper = $('.areas');
 
 			if(eventWrapper.length > 0) {
 				let slick_settings = {
@@ -490,7 +490,7 @@
 		$eventScope.init();
 		$congressScope.init();
 	}
-	if($('body').hasClass('page-template-templates_premio-tpl-php')) {
+	if($('body').hasClass('areas')) {
 		$eventScope.init();
 		$congressScope.init();
 	}

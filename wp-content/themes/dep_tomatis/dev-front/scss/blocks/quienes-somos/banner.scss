@@ -1,0 +1,29 @@
+.bannerqs {
+  padding: rem(30px) rem(60px);
+	display: block;
+	@include mq('md') {
+		display: flex;
+		flex-wrap: wrap;
+    padding: rem(160px) rem(220px);
+	}
+	&--caption {
+		display: block;
+    text-align: center;
+    @include mq('md') {
+      width: 49.9%;
+    }
+
+    h2{
+      color: $white;
+    }
+    h3 {
+        color: $white;
+    }
+    h3 span  {
+        color: $white;
+        background-color: $azul;
+        padding: rem(5px) rem(30px);
+    }
+	}
+
+}

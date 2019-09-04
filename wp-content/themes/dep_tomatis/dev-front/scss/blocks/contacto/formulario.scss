@@ -1,0 +1,32 @@
+.formulario{
+  background-size: cover;
+  padding: rem(10px) rem(30px);
+  @include mq('md'){
+  padding: rem(30px) rem(100px);
+  display: flex;
+  flex-wrap: wrap;
+  }
+  &--titulo{
+    width: 49.9%;
+    h2{
+      text-transform: uppercase;
+      color: $white;
+    }
+    h2 span{
+      background-color: $aguamarina;
+
+    }
+
+  }
+  &--form{
+    width: 49.9%;
+    background-color: $white;
+    text-align: center;
+    padding: rem(10px) rem(30px);
+    border-radius: 40px;
+
+    h3{
+      color: $azul-medio;
+    }
+  }
+}

@@ -1,5 +1,10 @@
 section {
-	&#About {
+
+	&#areas {
+		@include mq('md') {
+		padding: rem(30px) rem(100px);
+
+	}
 		header {
 			padding: rem(20px) 0;
 			@include mq('md') {
@@ -9,7 +14,8 @@ section {
 	}
 }
 
-.about {
+.areas {
+
 	text-align: center;
 	display: block;
 	@include mq('md') {
@@ -19,15 +25,24 @@ section {
 	&--item {
 		display: block;
 		text-align: center;
-		padding: rem(15px) rem(22px);
+		padding: rem(8px) rem(15px);
+
 		@include mq('md') {
 			width: 33.3%;
 			padding: rem(15px) rem(32px);
 		}
 		img {
+      width: 100%;
+      height: auto;
 			display: inline-block;
 			text-align: center;
-			margin: rem(15px) auto;
-		}		
+			margin-bottom: rem(15px) auto;
+		}
+
 	}
+  &--caption{
+    background-color: $azul-claro;
+    color: $white;
+		padding-bottom: rem(8px);
+  }
 }

@@ -482,7 +482,7 @@
 		},
 
 		ponentsCarousel: function ponentsCarousel() {
-			var eventWrapper = $('.event-ponents');
+			var eventWrapper = $('.areas');
 
 			if (eventWrapper.length > 0) {
 				var slick_settings = {
@@ -539,7 +539,7 @@
 		$eventScope.init();
 		$congressScope.init();
 	}
-	if ($('body').hasClass('page-template-templates_premio-tpl-php')) {
+	if ($('body').hasClass('areas')) {
 		$eventScope.init();
 		$congressScope.init();
 	}

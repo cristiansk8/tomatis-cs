@@ -15,12 +15,12 @@
 
   <section id="contacto">
     <div class="banner_formulario formulario" style="background-image:url(<?php echo $imagen_banner; ?>)">
-      <div class="formulario--tiutlo">
+      <div class="formulario--titulo">
         <h2><?php echo $titulo; ?></h2>
-        <span> <h2><?php echo $subtitulo; ?></h2> </span>
+        <h2><span> <?php echo $subtitulo; ?></span></h2>
       </div>
-      <div class="subscriptions-form">
-        <div class="subscriptions-form__wrapper container">
+      <div class="formulario--form">
+        <div class="formulario-form__wrapper ">
           <?php echo do_shortcode('[contact-form-7 id="52" title="Contacto"]'); ?>
         </div>
       </div>

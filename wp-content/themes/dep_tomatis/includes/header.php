@@ -31,7 +31,7 @@
       <?php
             wp_nav_menu( array(
 						  	'menu'              => 'main menu',
-                'theme_location'    => 'navbar-left',
+                'theme_location'    => 'navbar-right',
                 'depth'             => 2,
                 'menu_class'        => 'nav navbar-nav',
                 'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',

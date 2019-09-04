@@ -24,6 +24,7 @@
 			 ?>
 
 			<div class="slider--item" style="background-image:url(<?php echo $slider_item; ?>)">
+				<img src="<?php echo $slider_item; ?>">
 				<div class="slider--caption">
 					<?php if($big_text): ?>
 					<h1><?php echo $big_text; ?></h1>

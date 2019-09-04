@@ -1,0 +1,41 @@
+.infoqs{
+
+&--block{
+  text-align: center;
+  padding: rem(20px) rem(75px);
+  h2{
+    color: $azul;
+  }
+  b {
+    color: $azul-medio;
+  }
+  @include mq('md') {
+    text-align: left;
+  padding: rem(30px) rem(100px);
+
+}
+}
+
+&--banner{
+  background-size: cover;
+}
+&--caption{
+  text-align: center;
+  padding: rem(150px) rem(20px) rem(150px) rem(20px);
+  @include mq('md') {
+    text-align: right;
+    padding: rem(150px) rem(100px) rem(150px) rem(600px);
+
+}
+@include mq('lg'){
+  padding: rem(150px) rem(100px) rem(150px) rem(850px);
+}
+
+h3{
+  color: $white;
+}
+strong{
+  color:$naranja;
+}
+}
+}

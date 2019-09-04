@@ -1,0 +1,33 @@
+.ubicacion{
+  padding: rem(10px) rem(30px);
+  @include mq('md'){
+  padding: rem(30px) rem(100px);
+  }
+  &--title{
+    h3{
+      text-align: center;
+      color: $azul-medio;
+      @include mq('md'){
+      text-align: left;
+      }
+    }
+
+  }
+  &--info{
+    strong{
+      color:$azul-medio;
+    }
+  }
+}
+.map{
+  background-color: $aguamarina;
+  padding: rem(10px) rem(30px);
+  @include mq('md'){
+  padding: rem(30px) rem(100px);
+  }
+  &--title{
+    h3{
+      color:$white;
+    }
+  }
+}

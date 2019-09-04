@@ -11,8 +11,8 @@
 
 	?>
   <section>
-    <div class="bannerqs" style="background-image:url(<?php echo $fondo_banner; ?>)">
-      <div class="bannerqs--captions">
+    <div class="" style="background-image:url(<?php echo $fondo_banner; ?>)">
+      <div class="bannerqs--captions bannerqs">
         <?php
         while (have_rows('destacado')): the_row();
         $texto1=get_sub_field('texto1');

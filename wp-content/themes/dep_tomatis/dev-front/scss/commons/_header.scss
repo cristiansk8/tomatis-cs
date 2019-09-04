@@ -36,7 +36,7 @@
 			float: none;
 		}
 		.navbar-brand {
-			@include iconBg('../images/brand/logo.svg', 186px);
+			@include iconBg('../images/brand/logot.png', 70px);
 			width: rem(186px);
 			height: rem(50px);
 		}
@@ -63,9 +63,9 @@
 						padding-top: 0;
 						padding-bottom: 0;
 						text-transform: uppercase;
-						font-family: $bd;
+						font-family: $fr;
 						@include font(14px);
-						color: $blue;
+						color: $azul-medio;
 						@include mq('sm') {
 							@include font(11px);
 						}
@@ -78,7 +78,7 @@
 					&.active {
 						a {
 							background-color: transparent;
-							font-family: $bd;
+							font-family: $fr;
 							color: $yellow;
 						}
 					}

@@ -8,11 +8,11 @@
 			&[type="number"] {
 				display: block;
 				color: $gray;
-				border-radius: 0;
 				width: 100%;
 				height: auto;
-				background-color: $gray-e6;
-				border: rem(1px) solid $gray-d8;
+				background-color: $white;
+				border: rem(1px) solid $azul-medio;
+				border-radius: 30px;
 				padding: rem(10px);
 				@include placeholder {
 					color: $gray;
@@ -21,7 +21,8 @@
 
 			&[type="submit"] {
 				margin: rem(20px) 0;
-				@include marineBtn(14px);
+			  border-radius: 30px;
+				background-color: $naranja;
 			}
 		}
 		select {
@@ -30,22 +31,25 @@
 			border-radius: 0;
 			width: 100%;
 			height: auto;
-			border: rem(1px) solid $gray-d8;
-			background-color: $gray-e6;
+			border: rem(1px) solid $azul-medio;
+			border-radius: 30px;
+			background-color: $white;
 			padding: rem(10px);
 		}
 		textarea {
 			display: block;
+			height: 100px;
 			color: $gray;
-			border-radius: 0;
+			border-radius: 30px;
 			width: 100%;
-			border: rem(1px) solid $gray-d8;
-			background-color: $gray-e6;
+			border: rem(1px) solid $azul-medio;
+			background-color: $white;
 			padding: rem(10px);
 			@include placeholder {
 				color: $gray;
 			}
 		}
+
 	}
 }
 
