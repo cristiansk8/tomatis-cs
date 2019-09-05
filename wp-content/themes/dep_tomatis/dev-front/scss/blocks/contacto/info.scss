@@ -11,6 +11,11 @@
       text-align: left;
       }
     }
+    .linea-horizontal{
+      hr{
+        border-top: rem(2px) solid $aguamarina;
+      }
+    }
 
   }
   &--info{
@@ -28,6 +33,11 @@
   &--title{
     h3{
       color:$white;
+    }
+    .linea-horizontal{
+      hr{
+        border-top: rem(2px) solid $white;
+      }
     }
   }
 }

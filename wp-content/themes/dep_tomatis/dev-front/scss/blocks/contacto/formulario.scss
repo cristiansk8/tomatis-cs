@@ -1,4 +1,11 @@
+section{
+  &#contacto{
+    padding-top: 75px;
+  }
+}
+
 .formulario{
+  @include bgcover;
   background-size: cover;
   padding: rem(10px) rem(30px);
   @include mq('md'){
@@ -7,24 +14,31 @@
   flex-wrap: wrap;
   }
   &--titulo{
-    width: 49.9%;
+    width: 100%;
+    @include mq('md'){
+      width: 59.9%;
+    }
     h2{
+      text-align: center;
       text-transform: uppercase;
       color: $white;
     }
     h2 span{
       background-color: $aguamarina;
-
+      text-align: right;
+      padding: 5px 10px 0 50px;
     }
 
   }
   &--form{
-    width: 49.9%;
     background-color: $white;
     text-align: center;
     padding: rem(10px) rem(30px);
     border-radius: 40px;
-
+    width: 100%;
+    @include mq('md'){
+      width: 39.9%;
+    }
     h3{
       color: $azul-medio;
     }

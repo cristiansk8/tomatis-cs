@@ -10,7 +10,7 @@
     <div class="ubicacion">
       <div class="ubicacion--title">
         <h3>¿Dónde estamos?</h3>
-        <div class="liena-horizontal">
+        <div class="linea-horizontal">
 					<hr>
         </div>
       </div>
@@ -22,7 +22,7 @@
 		<div class="map">
 			<div class="map--title">
 				<h3>Mapa</h3>
-				<div class="liena-horizontal">
+				<div class="linea-horizontal">
 					<hr>
 				</div>
 			</div>

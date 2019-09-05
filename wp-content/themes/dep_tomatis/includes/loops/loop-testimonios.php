@@ -24,7 +24,7 @@ $query = new WP_Query($args);
 
   ?>
     <div class="testimonios--caption">
-      <?php the_title(); ?>
+      <h3><?php the_title(); ?></h3> 
       <?php the_content(); ?>
     </div>
   <?php endwhile;

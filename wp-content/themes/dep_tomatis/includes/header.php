@@ -25,7 +25,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="<?php echo home_url('/'); ?>"><?php bloginfo('name'); ?></a>
+      <a class="" href="<?php echo home_url('/'); ?>"> <img src="../wp-content/themes/dep_tomatis/img/logos/logot.png'" alt="" width="90px" height="auto"> </a>
     </div>
     <div class="collapse navbar-collapse" id="navbar">
       <?php

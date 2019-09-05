@@ -9,6 +9,7 @@
 	&--caption {
 		display: block;
     text-align: center;
+    text-transform: uppercase;
     @include mq('md') {
       width: 49.9%;
     }

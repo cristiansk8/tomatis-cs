@@ -5,9 +5,14 @@ $imagen_banner= get_field('imagen_banner');
 ?>
 
  <section>
-   <div class="areas banner" style="background-image:url(<?php echo $imagen_banner; ?>);">
-     <div class="areas--caption">
-       <h1><?php the_title(); ?></h1>
+   <div class="descrubre--wrapper descubre">
+     <div class="descubre--item" style="background-image:url(<?php echo $imagen_banner; ?>);">
+       <img src="<?php echo $imagen_banner; ?>" alt="">
+       <div class="descubre--caption">
+         <h1><?php the_title(); ?></h1>
+         <hr>
+       </div>
      </div>
    </div>
+
  </section>
