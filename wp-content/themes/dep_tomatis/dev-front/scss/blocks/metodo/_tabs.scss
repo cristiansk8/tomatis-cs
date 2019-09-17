@@ -1,0 +1,135 @@
+.tabs-metodo{
+
+  // Wrapper tabs
+  &__wrapper {
+
+    // Navigation
+    &-pills {
+      display: flex;
+      > li {
+        float: none;
+        text-align: center;
+        margin: 0 rem(5px) 0 0;
+        a {
+          background-color: $azul;
+          border-radius: 0 0 0 0;
+          margin: 0 0;
+          padding: rem(12px);
+          font-family: $bd;
+          @include font(17px);
+
+        }
+  
+        &:nth-child(1) {
+          a {
+            color: $azul-oscuro;
+            &:hover,
+            &:focus,
+            &:active {
+              background-color: $azul-claro;
+              color: $white;
+            }
+          }
+
+
+        }
+        &:nth-child(2) {
+          a {
+            color: $azul-medio;
+            &:hover,
+            &:focus,
+            &:active {
+              background-color: $azul-claro;
+              color: $white;
+            }
+          }
+        }
+        &:nth-child(3) {
+          a {
+            color: $azul-medio;
+            &:hover,
+            &:focus,
+            &:active {
+              background-color: $azul-claro;
+              color: $white;
+            }
+          }
+        }
+        &:nth-child(4) {
+          a {
+            color: $verde;
+            &:hover,
+            &:focus,
+            &:active {
+              background-color: $azul-claro;
+              color: $white;
+            }
+
+          }
+        }
+
+        &.active {
+          a {
+            background-color: $verde;
+            color: $white;
+          }
+        }
+      }
+    }
+
+    // Wrapper tabs
+    &-tabs {
+
+      &__item {
+        //background-color: $lp-purple;
+        color: $white;
+        padding: rem(32px) 0;
+
+        &.SOCIAL{
+          background-color: $verde;
+        }
+        &.LABORAL{
+          background-color: $verde;
+        }
+        &.DISRUPCIÓN{
+          background-color: $verde;
+        }
+        &.COMPROMISO{
+          background-color: $verde;
+        }
+
+        @include mq('md') {
+          padding: rem(52px) rem(32px);
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          align-items: center;
+        }
+
+        > div {
+          margin-bottom: rem(22px);
+          @include mq('md') {
+            width: 50%;
+          }
+        }
+
+        .categoria-infografia {
+          text-align: center;
+          img {
+            display: inline-block;
+            max-width: 90%;
+          }
+        }
+        .categoria-info {
+          padding: rem(15px) rem(22px);
+          p, ul {
+            color: $white;
+          }
+
+
+        }
+      }
+    }
+  }
+
+}

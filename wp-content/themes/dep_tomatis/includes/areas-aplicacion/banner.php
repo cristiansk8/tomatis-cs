@@ -9,7 +9,6 @@ $subtitulo= get_field('subtitulo');
  <section>
    <div class="area-wrapper area">
      <div class="banner area--item" style="background-image:url(<?php echo $banner; ?>);">
-       <img src="<?php echo $banner; ?>">
        <div class="area--caption">
          <?php if($titulo): ?>
          <h1><?php echo $titulo; ?></h1>

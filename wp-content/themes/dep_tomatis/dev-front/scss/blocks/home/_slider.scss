@@ -5,7 +5,8 @@
 	&--item {
 		//height: 83vh;
 		width: 100%;
-		position: relative;
+		
+		background-size: cover;
 		@include bgcover;
 
 		img {
@@ -40,26 +41,34 @@
 		}
 	}
 	&--caption {
-		position: absolute;
 		bottom: rem(60px);
 		left: 0;
-		padding: rem(40px);
+		padding-top: rem(80px);
+		padding-bottom:rem(80px);
 		text-align: center;
 		text-transform:uppercase;
 		max-width: rem(950px);
 		color: $white;
 		@include mq('md') {
+			padding: rem(160px);
 			bottom: unset;
 			left: rem(60px);
 			top: rem(160px);
 			text-align: left;
 		}
 		h1{
-			@include font(85px);
+			@include font(45px);
+			@include mq('md'){
+				@include font(85px);
+			}
 		}
 		h2{
-			@include font(45px);
-			text-align: right;
+			@include font(25px);
+			text-align: center;
+			@include mq('md'){
+				@include font(45px);
+				text-align: right;
+			}
 
 			span{
 				background-color: $verde;

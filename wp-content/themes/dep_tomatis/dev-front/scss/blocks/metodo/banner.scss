@@ -40,21 +40,23 @@
 		}
 	}
 	&--caption {
-		position: absolute;
 		bottom: rem(60px);
 		left: 0;
-		padding: rem(40px);
+		padding: rem(80px);
 		text-align: center;
     text-transform: uppercase;
 		max-width: rem(950px);
 		color: $white;
 		@include mq('md') {
+			padding: rem(160px);
 			bottom: unset;
-			top: rem(160px);
 			text-align: left;
 		}
 		h1{
-			@include font(85px);
+			@include font(45px);
+			@include mq('md'){
+				@include font(85px);
+			}
 		}
     hr{
       border-top: rem(20px) solid $verde;

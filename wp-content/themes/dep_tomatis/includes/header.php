@@ -17,8 +17,11 @@
 <![endif]-->
 
 <nav class="navbar navbar-default navbar-static-top">
-  <div class="container">
-    <div class="navbar-header">
+  <div class="container-fluid">
+		<div class="col-md-1">
+
+		</div>
+    <div class="navbar-header col-md-2">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
@@ -27,7 +30,7 @@
       </button>
       <a class="" href="<?php echo home_url('/'); ?>"> <img src="../wp-content/themes/dep_tomatis/img/logos/logot.png'" alt="" width="90px" height="auto"> </a>
     </div>
-    <div class="collapse navbar-collapse" id="navbar">
+    <div class="collapse navbar-collapse col-md-9" id="navbar">
       <?php
             wp_nav_menu( array(
 						  	'menu'              => 'main menu',

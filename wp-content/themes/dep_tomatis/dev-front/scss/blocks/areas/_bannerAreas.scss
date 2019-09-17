@@ -40,30 +40,30 @@
 		}
 	}
 	&--caption {
-		position: absolute;
 		bottom: rem(60px);
 		left: 0;
-		padding: rem(40px);
+		padding: rem(80px);
 		text-align: center;
     text-transform: uppercase;
 		max-width: rem(950px);
 		color: $white;
 		@include mq('md') {
-			bottom: unset;
-			left: rem(1000px);
-			top: rem(160px);
-			text-align: left;
+			padding: rem(160px);
 		}
 		h1{
-			@include font(85px);
+			@include font(45px);
+			@include mq('md') {
+				@include font(85px);
+			}
 		}
 		h2{
-			@include font(45px);
+			@include font(25px);
 			width: 100%;
 				background-color: $verde;
 				padding: 5px 50px 0 10px;
-
-
+				@include mq('md') {
+					@include font(45px);
+				}
 		}
 		p {
 			color: $white;

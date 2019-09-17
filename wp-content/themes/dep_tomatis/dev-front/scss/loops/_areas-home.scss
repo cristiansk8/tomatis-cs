@@ -1,0 +1,35 @@
+.areasHome{
+  text-align: center;
+	display: block;
+	@include mq('md') {
+		display: flex;
+		flex-wrap: wrap;
+	}
+  &--caption{
+      width: 100%;
+    	text-align: center;
+    	display: block;
+      @include mq('md') {
+        width: 20%;
+      }
+      h3{
+        padding: rem(20px);
+        color:$white;
+      }
+        img {
+          display: inline-block;
+          text-align: center;
+          padding: rem(10px);
+          position: relative;
+          @include mq('md') {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: -50px;
+            text-align: center;
+            display: inline-block;
+            max-width: 130px;
+            height: auto;
+          }
+        }
+}
+}

@@ -15,7 +15,7 @@ $parent = new WP_Query( $args );
 if ( $parent->have_posts() ) : ?>
 
 <section class="child-grid padding">
-  <div class="">
+  <div class="tabs-metodo">
         <ul class="nav nav-pills categorias__wrapper-pills">
    <?php
    $cont =0;
@@ -27,12 +27,14 @@ if ( $parent->have_posts() ) : ?>
           <?php if ($cont==1): ?>
             <li class="active <?php the_title(); ?>" >
               <a href="#menu<?php echo $cont;?>" >
+                <img src="<?php the_post_thumbnail_url('full'); ?>" alt="">
                 <?php the_title(); ?>
               </a>
             </li>
           <?php else: ?>
           <li>
             <a data-toggle="pill" href="#menu<?php echo $cont;?>" >
+              <img src="<?php the_post_thumbnail_url('full'); ?>" alt="">
               <?php the_title(); ?>
             </a>
           </li>
@@ -57,6 +59,7 @@ if ( $parent->have_posts() ) : ?>
             <div id="menu<?php echo $cont;  ?>" class="tab-pane fade  <?php echo $active; ?>">
               <div class="categorias__wrapper-tabs__item categoria-item <?php the_title(); ?>">
                 <div class="categoria-infografia">
+
                     <?php the_title(); ?>
                 </div>
               </div>
@@ -65,6 +68,7 @@ if ( $parent->have_posts() ) : ?>
              <div id="menu<?php echo $cont;  ?>" class="tab-pane fade">
                <div class="categorias__wrapper-tabs__item categoria-item <?php the_title(); ?>">
                  <div class="categoria-infografia">
+
                      <?php the_title();?>
                  </div>
                </div>

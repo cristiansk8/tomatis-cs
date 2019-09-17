@@ -1,0 +1,10 @@
+.banner-ubicacion{
+  color: $white;
+  text-align: center;
+  background-image: url('../images/bgs/bg-map.png');
+  background-size: cover;
+  padding: rem(40px);
+  @include mq('md') {
+    padding: rem(80px);
+  }
+}
