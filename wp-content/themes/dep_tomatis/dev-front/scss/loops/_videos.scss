@@ -6,7 +6,7 @@
 		width: rem(44px);
 		height: rem(44px);
 		z-index: 2;
-		&.slick-prev {			
+		&.slick-prev {
 			left: rem(10px);
 			@include iconBg('../images/icons/left-arrow.svg', 44px);
 		}
@@ -42,11 +42,75 @@
 		text-align: left;
 		h3 {
 			margin-top: 0;
-			position: relative;
 			a {
 				@include font(20px);
 				color: $gray;
 			}
 		}
+	}
+}
+section{
+	&#videoPost{
+		.overlay {
+		position: fixed;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		background: #116db991;
+		transition: opacity 500ms;
+		visibility: hidden;
+		opacity: 0;
+	}
+	.overlay:target {
+		visibility: visible;
+		opacity: 1;
+	}
+
+	.popup {
+		margin: 120px auto;
+		padding: 20px;
+		background: #fff;
+		border-radius: 50px;
+		width: 80%;
+		position: relative;
+		transition: all 5s ease-in-out;
+		@include mq('md') {
+		 padding: 50px;
+		}
+
+		h2{
+			color: $azul-medio;
+			text-transform: uppercase;
+		}
+		strong{
+			color: $azul-medio;
+		}
+		hr{
+			border-top: 2px solid $azul-medio;
+		}
+	}
+		.popup .close {
+		  position: absolute;
+		  top: 20px;
+		  right: 30px;
+		  transition: all 200ms;
+		  font-size: 30px;
+		  font-weight: bold;
+		  text-decoration: none;
+		  color: #333;
+		}
+		.popup .close:hover {
+		  color: $azul-oscuro;
+		}
+		.popup .content {
+		  max-height: 480px;
+		  overflow: auto;
+			overflow-y: scroll;
+			@include mq('md') {
+		   max-height: 920px;
+			}
+
+			}
 	}
 }

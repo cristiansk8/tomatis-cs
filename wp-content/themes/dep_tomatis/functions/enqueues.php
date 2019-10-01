@@ -12,6 +12,9 @@ function bst_enqueues() {
 
 	wp_register_style('main-css', get_template_directory_uri() . '/assets/css/theme.css', false, null);
 	wp_enqueue_style('main-css');
+
+	wp_register_style('ekko-css', get_template_directory_uri() . '/css/ekko-lightbox.css', false, null);
+wp_enqueue_style('ekko-css');
 	/* Scripts */
 
 	wp_enqueue_script( 'jquery' );

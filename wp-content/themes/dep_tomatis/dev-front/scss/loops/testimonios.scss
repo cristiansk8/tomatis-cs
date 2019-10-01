@@ -1,10 +1,20 @@
 .testimonios{
-width: 30%;
+  width: 98%;
+  padding: 20px 0;
+  @include mq(md){
+  padding: 40px 0;
+  };
 
 &--caption{
   h3{
     text-align: center;
     color: $azul-medio;
+  }
+  p{
+    padding: 0 10%;
+    @include mq(md){
+    padding: 0 40%;
+    };
   }
   strong{
     color:$azul-medio;

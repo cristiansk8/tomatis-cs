@@ -16,7 +16,12 @@ $query = new WP_Query($args);
 ?>
 
 <section>
-  <div class="testimonios">
+  <div class="tittle-testimonios">
+    <header>
+      <h2>Testimonios</h2>
+    </header>
+  </div>
+  <div class="slider-prod testimonios">
     <?php
 
   if($query->have_posts()):
@@ -24,7 +29,7 @@ $query = new WP_Query($args);
 
   ?>
     <div class="testimonios--caption">
-      <h3><?php the_title(); ?></h3> 
+    
       <?php the_content(); ?>
     </div>
   <?php endwhile;

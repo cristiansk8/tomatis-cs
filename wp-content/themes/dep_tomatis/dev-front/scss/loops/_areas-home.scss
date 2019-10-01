@@ -1,10 +1,5 @@
 .areasHome{
   text-align: center;
-	display: block;
-	@include mq('md') {
-		display: flex;
-		flex-wrap: wrap;
-	}
   &--caption{
       width: 100%;
     	text-align: center;
@@ -15,16 +10,14 @@
       h3{
         padding: rem(20px);
         color:$white;
+        min-height: 150px;
       }
         img {
-          display: inline-block;
+          margin-top: -50px;
           text-align: center;
+          display: inline-block;
           padding: rem(10px);
-          position: relative;
           @include mq('md') {
-            display: flex;
-            flex-wrap: wrap;
-            margin-top: -50px;
             text-align: center;
             display: inline-block;
             max-width: 130px;

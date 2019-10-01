@@ -24,16 +24,31 @@ $query = new WP_Query($args);
     <?php
 
   if($query->have_posts()):
+    $cont = 0;
     while($query->have_posts()): $query->the_post();
     $subtitulo= get_field('subtitulo');
+    $cont++;
   ?>
   <div class="areas--item">
 
-    <div class="areas--caption">
-      <?php the_post_thumbnail(); ?>
-      <h3><?php echo $subtitulo; ?></h3>
-    </div>
+    <a href="#popup<?php echo $cont; ?>">
+      <div class="areas--caption">
+        <?php the_post_thumbnail(); ?>
+        <h3><?php echo $subtitulo; ?></h3>
+      </div>
+    </a>
   </div>
+
+  <div id="popup<?php echo $cont; ?>" class="overlay">
+	<div class="popup">
+		<h2><?php echo $subtitulo; ?></h2>
+    <hr>
+		<a class="close" href="#">&times;</a>
+		<div class="content">
+			<?php the_content(); ?>
+		</div>
+	</div>
+</div>
 
   <?php endwhile;
   wp_reset_query();

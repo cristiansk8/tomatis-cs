@@ -16,13 +16,13 @@ $query = new WP_Query($args);
 ?>
 
 <section>
-  <div class="areas">
+  <div class="aliados">
     <?php
 
   if($query->have_posts()):
     while($query->have_posts()): $query->the_post();
   ?>
-    <div class="areas-caption">
+    <div class="aliados-caption">
 
       <?php the_post_thumbnail(); ?>
       <h3><?php the_title(); ?></h3>
