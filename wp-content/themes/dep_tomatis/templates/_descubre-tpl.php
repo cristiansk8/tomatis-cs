@@ -10,6 +10,8 @@
 
 		get_template_part('includes/loops/loop-videos');
 
+		get_template_part('includes/loops/loop-gallery');
+
 		get_template_part('includes/loops/loop-aliados');
 
 	get_template_part('includes/footer');

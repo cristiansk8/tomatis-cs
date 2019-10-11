@@ -24,14 +24,7 @@ if ( $parent->have_posts() ) : ?>
         // Featured image
         // $feat_image = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), "full", true);
    ?>
-          <?php if ($cont==1): ?>
-            <li class="active <?php the_title(); ?>" >
-              <a href="#menu<?php echo $cont;?>" >
-                <img src="<?php the_post_thumbnail_url('full'); ?>" alt="">
-                <?php the_title(); ?>
-              </a>
-            </li>
-          <?php else: ?>
+
           <li>
             <a data-toggle="pill" href="#menu<?php echo $cont;?>" >
               <img src="<?php the_post_thumbnail_url('full'); ?>" alt="">
@@ -39,10 +32,10 @@ if ( $parent->have_posts() ) : ?>
             </a>
           </li>
   <?php
-    endif;
+
     endwhile;
   ?>
-  <?php endif; wp_reset_query(); ?>
+  <?php endif;?>
     </ul>
 
     <?php if ( $parent->have_posts() ) : ?>
@@ -60,7 +53,7 @@ if ( $parent->have_posts() ) : ?>
               <div class="categorias__wrapper-tabs__item categoria-item <?php the_title(); ?>">
                 <div class="categoria-infografia">
 
-                    <?php the_title(); ?>
+                    <?php the_content(); ?>
                 </div>
               </div>
             </div>
@@ -69,7 +62,7 @@ if ( $parent->have_posts() ) : ?>
                <div class="categorias__wrapper-tabs__item categoria-item <?php the_title(); ?>">
                  <div class="categoria-infografia">
 
-                     <?php the_title();?>
+                     <?php the_content();?>
                  </div>
                </div>
            </div>
@@ -77,7 +70,7 @@ if ( $parent->have_posts() ) : ?>
              endif;
              endwhile;
            ?>
-           <?php endif; wp_reset_query(); ?>
+           <?php endif; ?>
      </div>
 </div>
 </section><!-- /.child-grid -->

@@ -15,8 +15,14 @@ $query = new WP_Query($args);
 
 ?>
 
-<section>
+<section id="aliados">
+<div class="aliados-container">
+  <div class="tittle-videos">
+    <h2>Nuestros aliados</h2>
+    <hr>
+  </div>
   <div class="aliados">
+
     <?php
 
   if($query->have_posts()):
@@ -33,6 +39,7 @@ $query = new WP_Query($args);
   ?>
 
   </div>
+</div>
 
 </section>
 <?php endif; ?>

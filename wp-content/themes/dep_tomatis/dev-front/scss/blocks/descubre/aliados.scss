@@ -1,11 +1,10 @@
 section{
-&#videoPost{
+.aliados-container{
   padding: rem(15px) rem(50px);
   @include mq('md') {
   padding: rem(30px) rem(100px);
 
 }
-.videos-container{
   .tittle-videos{
     h2{
       color: $azul-medio;
@@ -15,12 +14,15 @@ section{
     }
   }
 }
-
-.videos{
-  article{
-    padding: 0 rem(25px);
+.aliados{
+  &-caption{
+    text-align: center;
+    img{
+      display: inline-block;
+    }
   }
 }
-}
+
+
 
 }

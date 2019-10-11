@@ -21,14 +21,14 @@
 }
 &--caption{
   text-align: center;
-  padding: rem(150px) rem(20px) rem(150px) rem(20px);
+  padding: rem(80px) rem(20px) rem(150px) rem(20px);
   @include mq('md') {
     text-align: right;
-    padding: rem(150px) rem(100px) rem(150px) rem(600px);
+    padding: rem(80px) rem(100px) rem(150px) rem(600px);
 
 }
 @include mq('lg'){
-  padding: rem(150px) rem(100px) rem(150px) rem(850px);
+  padding: rem(80px) rem(100px) rem(150px) rem(850px);
 }
 
 h3{

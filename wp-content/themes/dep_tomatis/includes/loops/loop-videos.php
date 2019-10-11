@@ -9,10 +9,12 @@
 ?>
 
 <section id="videoPost">
-	<div class="">
-		<header>
+	<div class="videos-container">
+		<div class="tittle-videos">
 			<h2>Videos</h2>
-		</header>
+			<hr>
+		</div>
+
 		<div class="videos">
 			<?php
 				$args = array( 'post_type' => 'videos', 'posts_per_page' => 100 );
@@ -27,17 +29,17 @@
 					<a href="#popup<?php echo $cont; ?>"> <img src="https://i.ytimg.com/vi/<?php echo $yt_id; ?>/hqdefault.jpg" alt="" width="100%" height="auto"> </a>
 					</figure>
 					<div class="video-news--caption">
-						<h3>
+						<p>
 							<?php the_title(); ?>
-						</h3>
+						</p>
 					</div>
 					<div id="popup<?php echo $cont; ?>" class="overlay">
 					<div class="popup">
 						<h2><?php the_title(); ?></h2>
 						<hr>
 						<a class="close" href="#">&times;</a>
-						<div class="content">
-							<iframe width="560" height="315" src="https://www.youtube.com/embed/<?php echo $yt_id; ?>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+						<div class="content video-responsive">
+							<iframe src="https://www.youtube.com/embed/<?php echo $yt_id; ?>" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
 						</div>
 					</div>
 				</div>
