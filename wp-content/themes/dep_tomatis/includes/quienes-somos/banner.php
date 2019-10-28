@@ -24,7 +24,7 @@
           <h3><?php echo $texto1; ?></h3>
         <?php endif; ?>
         <?php if($numero): ?>
-          <h2><?php echo $numero; ?></h2>
+          <h2 class="counter" data-count="<?php echo $numero; ?>">1</h2>
         <?php endif; ?>
         <?php if($texto_color): ?>
           <h3> <span><?php echo $texto_color; ?></span> </h3>
