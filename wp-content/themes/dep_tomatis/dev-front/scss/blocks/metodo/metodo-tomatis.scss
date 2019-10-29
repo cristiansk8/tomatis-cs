@@ -1,0 +1,78 @@
+.categoria-item{
+
+  .categoria-infografia{
+    .metodoTomatis {
+      article{
+  margin:1em auto;
+  padding:1em;
+  min-height:414px;
+  line-height:150%;
+}
+.block-2{
+  &--high{
+    background-color: $gris-trasparente;
+    &--text{
+      text-align: center;
+      padding: rem(10px) rem(22px);
+
+      @include mq('md') {
+        padding: rem(15px) rem(96px);
+        text-align: left;
+      }
+      p{
+        font-weight: bold;
+        font-size: 20px;
+      }
+      p span{
+        color: $naranja;
+      }
+    }
+  }
+}
+article img{
+  width:300px;
+  height:auto;
+  float:right;
+  shape-margin:1em;
+  shape-outside: url(https://tomatis.com.co/wp-content/uploads/2019/10/Imagen-Metodo-Tomatis.png);
+}
+.forma{
+shape-outside: url(https://tomatis.com.co/wp-content/uploads/2019/10/Imagen-Metodo-Tomatis.png);
+shape-image-threshold: 0.5;
+shape-margin: 20px;
+float: right;
+}
+      .block-1{
+        text-align: center;
+        padding: 0 rem(22px);
+
+        @include mq('md') {
+          padding: 0 rem(96px);
+          text-align: left;
+        }
+        h2{
+          color: $azul-medio;
+        }
+        b {
+          color: $azul-oscuro;
+        }
+        hr{
+          border-top: rem(2px) solid $aguamarina;
+        }
+        span{
+          font-weight: bold;
+          font-size: 20px;
+        }
+      }
+      header {
+        padding: rem(20px) 0;
+        @include mq('md') {
+          padding: rem(42px) 0;
+        }
+      }
+
+    }
+  }
+
+
+}
