@@ -1,6 +1,7 @@
 .testimonios{
   width: 98%;
   padding: 20px 0;
+  overflow: hidden;
   @include mq(md){
   padding: 40px 0;
   };
