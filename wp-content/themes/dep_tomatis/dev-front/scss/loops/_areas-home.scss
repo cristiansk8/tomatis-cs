@@ -1,5 +1,6 @@
 .areasHome{
   text-align: center;
+  position: relative;
   &--caption{
       width: 100%;
     	text-align: center;
@@ -24,5 +25,6 @@
             height: auto;
           }
         }
+
 }
 }

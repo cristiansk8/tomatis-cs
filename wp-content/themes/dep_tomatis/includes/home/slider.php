@@ -27,7 +27,7 @@
 			 ?>
 
 			<div class="slider--item" style="background-image:url(<?php echo $slider_item; ?>)">
-				<a href="https://tomatis.com.co/areas-de-aplicacion/#popup<?php echo $cont; ?>">
+
 					<div class="slider--caption">
 						<?php if($big_text): ?>
 						<h1><?php echo $big_text; ?></h1>
@@ -39,7 +39,7 @@
 						<h2> <span><?php echo $color_text; ?></span> </h2>
 					<?php endif; ?>
 					</div>
-				</a>
+
 
 
 			</div>

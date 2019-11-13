@@ -16,6 +16,7 @@ $query = new WP_Query($args);
 ?>
 
 <section>
+
   <div class="areas-home">
     <?php
     $array = array("#4fa7d5", "#1175b7", "#2e5ea3", "#1aa7b3", "#60bb46","#4fa7d5");
@@ -33,7 +34,9 @@ $query = new WP_Query($args);
           <img src="<?php echo $logo; ?>" alt="">
         </a>
         <h3><?php the_title(); ?></h3>
-
+        <div class="overlay" style="background-color:<?php echo $array[$cont] ?>">
+          <p class="overlay--text"><?php echo get_the_excerpt(); ?></p>
+        </div>
       </div>
 
   <?php endwhile;
