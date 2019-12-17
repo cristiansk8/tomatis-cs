@@ -24,26 +24,18 @@
 					$yt_id = get_field('youtube_id');
 					$cont++;
 			?>
-				<article class="">
-					<figure>
-					<a href="#popup<?php echo $cont; ?>"> <img src="https://i.ytimg.com/vi/<?php echo $yt_id; ?>/hqdefault.jpg" alt="" width="100%" height="auto"> </a>
-					</figure>
-					<div class="video-news--caption">
-						<p>
-							<?php the_title(); ?>
-						</p>
-					</div>
-					<div id="popup<?php echo $cont; ?>" class="overlay">
-					<div class="popup">
-						<h2><?php the_title(); ?></h2>
-						<hr>
-						<a class="close" href="#">&times;</a>
-						<div class="content video-responsive">
-							<iframe src="https://www.youtube.com/embed/<?php echo $yt_id; ?>" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
-						</div>
-					</div>
-				</div>
-				</article>
+			<div class="videos-item">
+				<a  class="images" data-fancybox-type="iframe" href="https://www.youtube.com/embed/<?php echo $yt_id; ?>"data-fancybox="gallery">
+	<img src="https://i.ytimg.com/vi/<?php echo $yt_id; ?>/hqdefault.jpg" alt="" width="100%" height="auto">
+	<div class="video-news--caption">
+		<p>
+			<?php the_title(); ?>
+		</p>
+	</div>
+		</a>
+			</div>
+
+
 
 			<?php
 			wp_reset_query();

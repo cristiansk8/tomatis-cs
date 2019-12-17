@@ -30,7 +30,7 @@ $query = new WP_Query($args);
   ?>
 
       <div class="areasHome--caption" style="background-color:<?php echo $array[$cont] ?>">
-        <a href="https://tomatis.com.co/areas-de-aplicacion/#popup<?php echo $cont2; ?>">
+        <a href="https://tomatis.com.co/areas-de-aplicacion/#images-<?php echo $cont2; ?>">
           <img src="<?php echo $logo; ?>" alt="">
         </a>
         <h3><?php the_title(); ?></h3>

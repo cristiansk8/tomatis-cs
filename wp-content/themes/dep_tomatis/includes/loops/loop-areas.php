@@ -29,27 +29,25 @@ $query = new WP_Query($args);
     $subtitulo= get_field('subtitulo');
     $cont++;
   ?>
-  <div class="areas--item">
-
-    <a href="#popup<?php echo $cont; ?>">
-      <div class="areas--caption">
-        <?php the_post_thumbnail(); ?>
-        <h3><?php echo $subtitulo; ?></h3>
-      </div>
-    </a>
+<div id="inline<?php echo $cont; ?>" class="" style="display:none;width:80%;">
+<div class="popup">
+  <h2><?php echo $subtitulo; ?></h2>
+  <hr>
+  <a class="close" href="#">&times;</a>
+  <div class="content">
+    <?php the_content(); ?>
   </div>
-
-  <div id="popup<?php echo $cont; ?>" class="overlay">
-	<div class="popup">
-		<h2><?php echo $subtitulo; ?></h2>
-    <hr>
-		<a class="close" href="#">&times;</a>
-		<div class="content">
-			<?php the_content(); ?>
-		</div>
-	</div>
+</div>
 </div>
 
+<div class="areas--item">
+  <a class="fancyOther" data-fancybox="images" href="#inline<?php echo $cont; ?>" data-fancybox="gallery">
+    <div class="areas--caption">
+      <?php the_post_thumbnail(); ?>
+      <h3><?php echo $subtitulo; ?></h3>
+    </div>
+  </a>
+</div>
   <?php endwhile;
   wp_reset_query();
   ?>

@@ -32,6 +32,7 @@ section {
   opacity: 1;
 }
 
+
 .popup {
   margin: 120px auto;
   padding: 20px;
@@ -112,4 +113,23 @@ section {
     color: $white;
 		padding-bottom: rem(8px);
   }
+}
+.fancybox-container{
+						h2{
+							color: $azul-medio;
+							text-transform: uppercase;
+						}
+						strong{
+							color: $azul-medio;
+						}
+						hr{
+							border-top: 2px solid $azul-medio;
+						}
+
+}
+.fancybox-content{
+	    border-radius: 50px;
+}
+.fancybox-bg{
+	background: #116db991 !important;
 }
