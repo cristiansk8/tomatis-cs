@@ -18,3 +18,10 @@ add_action('after_setup_theme', 'true_load_theme_textdomain');
 function true_load_theme_textdomain(){
     load_theme_textdomain( 'bst', get_template_directory() . '/languages' );
 }
+add_action('rest_api_init', 'custom_api_get_projects');
+function custom_api_get_projects(){
+  register_rest_route( 'projects', '/all-posts', array(
+    'methods' => 'GET',
+    'callback' => 'custom_api_get_projects_callback'
+  ));
+}

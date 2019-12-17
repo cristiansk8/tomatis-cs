@@ -52,6 +52,7 @@
 			text-align: left;
 		}
 		h1{
+			text-shadow: 3px 3px 3px #4f79a3;
 			@include font(45px);
 			@include mq('md') {
 			   @include font(85px);

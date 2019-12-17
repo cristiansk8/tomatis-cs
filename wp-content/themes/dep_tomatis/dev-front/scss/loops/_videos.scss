@@ -68,13 +68,14 @@ section{
 	}
 
 	.popup {
-		margin: 120px auto;
+		margin: 20px auto;
 		padding: 20px;
 		background: #fff;
 		border-radius: 50px;
 		width: 80%;
+		height: auto;
 		position: relative;
-		transition: all 5s ease-in-out;
+		transition: all 2s ease-in-out;
 		@include mq('md') {
 		 padding: 50px;
 		}

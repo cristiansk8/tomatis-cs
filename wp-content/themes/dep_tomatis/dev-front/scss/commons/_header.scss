@@ -11,6 +11,7 @@
 	> .container-fluid {
 		position: relative;
 		margin-bottom: -30px;
+
 	}
 
 	// Scrolled menu styles
@@ -55,6 +56,7 @@
 			&.navbar-nav {
 				float: none;
 				clear: both;
+				background-color: $white;
 				> li {
 					@include mq('sm') {
 						display: inline-block;
@@ -64,24 +66,23 @@
 					a {
 						padding-top: 0;
 						padding-bottom: 0;
-						text-transform: uppercase;
 						font-family: $fr;
-						@include font(14px);
+						@include font(15px);
 						color: $azul-medio;
 						@include mq('sm') {
-							@include font(11px);
+							@include font(18px);
 						}
 						&:hover,
 						&:focus {
 							background-color: transparent;
-							color: $yellow;
+							color: $aqua;
 						}
 					}
 					&.active {
 						a {
 							background-color: transparent;
 							font-family: $fr;
-							color: $yellow;
+							color: $aqua;
 						}
 					}
 				}

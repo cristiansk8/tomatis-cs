@@ -13,6 +13,15 @@ section{
       border-top: .2rem solid #1aa7b3;
     }
   }
+  .galery{
+    display: flex;
+    flex-wrap: wrap;
+
+    figure{
+      width: 33.3%;
+      padding: 0 5px;
+    }
+  }
 }
 .fotos{
   &-caption{
@@ -22,6 +31,7 @@ section{
     }
   }
 }
+
 
 
 

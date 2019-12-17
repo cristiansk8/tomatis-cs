@@ -10,5 +10,6 @@
 
 		get_template_part('includes/metodo-tomatis/contenido');
 
-
+		get_template_part('includes/loops/loop-testimonios');
+		
 	get_template_part('includes/footer');

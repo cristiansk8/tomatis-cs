@@ -13,6 +13,37 @@
         h2{
           color: $azul-medio;
         }
+        h3{
+          color: $azul-oscuro;
+          font-size: 20px;
+        }
+        b {
+          color: $azul-oscuro;
+        }
+        hr{
+          border-top: rem(2px) solid $aguamarina;
+        }
+        span{
+          font-weight: bold;
+          font-size: 20px;
+        }
+      }
+      .block-2{
+        background-color: $gris-trasparente;
+        text-align: center;
+        padding: rem(15px) rem(22px);
+
+        @include mq('md') {
+          padding: rem(45px) rem(96px);
+          text-align: left;
+        }
+        h2{
+          color: $azul-medio;
+        }
+        h3{
+          color: $azul-oscuro;
+          font-size: 20px;
+        }
         b {
           color: $azul-oscuro;
         }
@@ -44,7 +75,7 @@
                   width: 49.9%;
                 }
                 img {
-                  
+
                   height: auto;
                   display: inline-block;
                   text-align: center;
@@ -78,6 +109,24 @@
                 @include mq('md') {
                   padding: rem(45px) rem(96px);
                   text-align: left;
+                }
+                #img-cantos{
+                  display: none;
+                  @include mq('md') {
+                    margin-top: -230px;
+                    margin-left: 80%;
+                    display: initial;
+                  }
+
+                }
+                #img-frecuencias{
+                  display: none;
+                  @include mq('md') {
+                    margin-top: -110px;
+                    padding-left: 40%;
+                    padding-right: 40%;
+                    display: initial;
+                  }
                 }
               }
       }

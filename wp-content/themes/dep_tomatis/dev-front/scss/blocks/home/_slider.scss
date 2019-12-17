@@ -5,7 +5,7 @@
 	&--item {
 		//height: 83vh;
 		width: 100%;
-		
+
 		background-size: cover;
 		@include bgcover;
 
@@ -61,19 +61,21 @@
 			@include mq('md'){
 				@include font(85px);
 			}
+			text-shadow: 3px 3px 3px #4f79a3;
 		}
 		h2{
 			@include font(25px);
 			text-align: center;
 			@include mq('md'){
 				@include font(45px);
-				text-align: right;
+				text-align: left;
 			}
+			text-shadow: 3px 3px 3px #4f79a3;
 
 			span{
 				background-color: $verde;
-				padding: 5px 10px 0 50px;
-
+				padding: 5px 10px 0 5px;
+				text-shadow: 0px 0px 0px #4f79a3;
 			}
 		}
 		p {
