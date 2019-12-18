@@ -20,11 +20,13 @@
 			}
 
 			&[type="submit"] {
+				font-family: monospace;
 				margin: rem(20px) 0;
 			  border-radius: 30px;
-				background-color: $naranja;
+				background-color: $naranja !important;
 				padding: rem(15px);
 				width: 150px;
+				font-size: 24px;
 			}
 		}
 		select {

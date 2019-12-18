@@ -15,7 +15,7 @@ $query = new WP_Query($args);
 
 ?>
 
-<section id="aliados">
+<section id="aliados" style="display:none;">
 <div class="aliados-container">
   <div class="tittle-videos">
     <h2>Nuestros aliados</h2>
