@@ -35,7 +35,7 @@
 
         @include mq('md') {
           padding: rem(45px) rem(96px);
-          text-align: left;
+          text-align: justify;
         }
         h2{
           color: $azul-medio;
@@ -108,7 +108,7 @@
 
                 @include mq('md') {
                   padding: rem(45px) rem(96px);
-                  text-align: left;
+                  text-align: justify;
                 }
                 #img-cantos{
                   display: none;

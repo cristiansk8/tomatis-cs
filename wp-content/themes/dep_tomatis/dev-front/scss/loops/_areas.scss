@@ -85,6 +85,7 @@ section {
 
 
 .areas {
+	justify-content: center;
 	display: block;
 	@include mq('md') {
 		display: flex;
@@ -105,7 +106,13 @@ section {
 			display: inline-block;
 			text-align: center;
 			margin-bottom: rem(15px) auto;
+			&:hover {filter: opacity(.5);}
 		}
+		  h3{
+				padding: 0 5px;
+	  		}
+
+
 
 	}
   &--caption{
@@ -125,10 +132,19 @@ section {
 						hr{
 							border-top: 2px solid $azul-medio;
 						}
+						ul{
+							li{
+								h3{
+									color: $gray;
+									font-size: 17px;
+								}
+							}
+						}
 
 }
 .fancybox-content{
 	    border-radius: 50px;
+			text-align: justify !important;
 }
 .fancybox-bg{
 	background: #116db991 !important;

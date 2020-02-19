@@ -111,6 +111,68 @@ float: right;
                 }
               }
       }
+      .infoEscucharLista{
+
+
+              display: block;
+              @include mq('md') {
+                display: flex;
+                flex-wrap: wrap;
+              }
+              &--item {
+                display: block;
+
+                @include mq('md') {
+                  width: 49.9%;
+                }
+                img {
+
+                  height: auto;
+                  display: inline-block;
+                  text-align: center;
+
+                }
+                h2{
+                  color: $azul-medio;
+                }
+                b {
+                  color: $azul-oscuro;
+                }
+                a {
+                  background-color: $naranja;
+                  margin: 50px;
+                  padding: (15px) rem(22px);
+                  border-radius: 30px;
+                  color: $white;
+                  @include mq('md') {
+                    padding: rem(15px) rem(32px);
+                  }
+                }
+
+              }
+              .block1{
+                background-color: $gris-trasparente;
+              }
+              &--caption{
+                p{
+                  font-weight: bold;
+                  font-size: 20px;
+                }
+                .colorVerde{
+                  color: $verde;
+                }
+                .colorNaranja{
+                  color: $naranja;
+                }
+                text-align: center;
+                padding: rem(15px) rem(22px);
+
+                @include mq('md') {
+                  padding: rem(15px) rem(96px);
+                  text-align: left;
+                }
+              }
+      }
 
     }
   }
