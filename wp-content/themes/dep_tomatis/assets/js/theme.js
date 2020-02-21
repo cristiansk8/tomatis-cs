@@ -191,15 +191,30 @@
                 infinite: false,
                 speed: 300,
                 slidesToShow: 6,
-                slidesToScroll: 6
+                slidesToScroll: 6,
+                responsive: [{
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 3
+                    }
+                }, {
+                    breakpoint: 600,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 2
+                    }
+                }, {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                }]
             };
 
             if (!slider_areas.hasClass('slick-initialized')) {
-                if ($(window).innerWidth() >= 720) {
-                    slider_areas.slick(areas_params);
-                } else {
-                    slider_areas.slick();
-                }
+                slider_areas.slick(areas_params);
             }
         },
 

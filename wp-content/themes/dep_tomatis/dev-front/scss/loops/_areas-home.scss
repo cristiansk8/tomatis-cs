@@ -1,28 +1,36 @@
-.areasHome {
-    text-align: center;
+.areas-home {
+    overflow-x: hidden;
+    display: block;
+    padding: rem(120px) 0 0;
     position: relative;
-    &--caption {
+    top: rem(-120px);
+    .areasHome {
         text-align: center;
-        display: block;
-        a {
-            display: block;
-        }
-        h3 {
-            padding: rem(20px);
-            color: $white;
-            min-height: 150px;
-            padding-top: 45px;
-        }
-        img {
-            margin-top: -50px;
+        position: relative;
+        &--caption {
             text-align: center;
-            display: inline-block;
-            padding: rem(10px);
-            @include mq('md') {
+            display: block;
+            a {
+                display: block;
+            }
+            h3 {
+                padding: rem(20px);
+                color: $white;
+                min-height: 150px;
+                padding-top: 45px;
+            }
+            img {
+                top: -50px;
+                position: relative;
                 text-align: center;
                 display: inline-block;
-                max-width: 130px;
-                height: auto;
+                padding: rem(10px);
+                @include mq('md') {
+                    text-align: center;
+                    display: inline-block;
+                    max-width: 130px;
+                    height: auto;
+                }
             }
         }
     }
