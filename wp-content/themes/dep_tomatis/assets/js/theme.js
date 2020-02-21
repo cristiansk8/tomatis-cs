@@ -75,474 +75,495 @@
 
 (function ($) {
 
-	var $GeneralScope = {
+    var $GeneralScope = {
 
-		// Constructor
-		init: function init() {
-			this.menuScripts();
-			this.fancyScripts();
-			this.hashLink();
-		},
+        // Constructor
+        init: function init() {
+            this.menuScripts();
+            this.fancyScripts();
+            this.hashLink();
+        },
 
-		// scripts for Menu
-		menuScripts: function menuScripts() {
-			$(window).scroll(function () {
+        // scripts for Menu
+        menuScripts: function menuScripts() {
+            $(window).scroll(function () {
 
-				var scroll = $(window).scrollTop();
-				var header_el = $('.navbar');
+                var scroll = $(window).scrollTop();
+                var header_el = $('.navbar');
 
-				if (scroll >= 100) {
-					header_el.addClass("scroll_menu");
-				} else {
-					header_el.removeClass("scroll_menu");
-				}
-			});
-		},
+                if (scroll >= 100) {
+                    header_el.addClass("scroll_menu");
+                } else {
+                    header_el.removeClass("scroll_menu");
+                }
+            });
+        },
 
-		hashLink: function hashLink() {
-			// Select all links with hashes
-			$('a[href*="#"]')
-			// Remove links that don't actually link to anything
-			.not('[href="#"]').not('[href="#0"]').click(function (event) {
-				// On-page links
-				if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-					// Figure out element to scroll to
-					var target = $(this.hash);
-					target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-					// Does a scroll target exist?
-					if (target.length) {
-						// Only prevent default if animation is actually gonna happen
-						event.preventDefault();
-						$('html, body').animate({
-							scrollTop: target.offset().top
-						}, 1000, function () {
-							// Callback after animation
-							// Must change focus!
-							var $target = $(target);
-							$target.focus();
-							if ($target.is(":focus")) {
-								// Checking if the target was focused
-								return false;
-							} else {
-								$target.attr('tabindex', '-1'); // Adding tabindex for elements not focusable
-								$target.focus(); // Set focus again
-							};
-						});
-					}
-				}
-			});
-		},
+        hashLink: function hashLink() {
+            // Select all links with hashes
+            $('a[href*="#"]')
+            // Remove links that don't actually link to anything
+            .not('[href="#"]').not('[href="#0"]').click(function (event) {
+                // On-page links
+                if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+                    // Figure out element to scroll to
+                    var target = $(this.hash);
+                    target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                    // Does a scroll target exist?
+                    if (target.length) {
+                        // Only prevent default if animation is actually gonna happen
+                        event.preventDefault();
+                        $('html, body').animate({
+                            scrollTop: target.offset().top
+                        }, 1000, function () {
+                            // Callback after animation
+                            // Must change focus!
+                            var $target = $(target);
+                            $target.focus();
+                            if ($target.is(":focus")) {
+                                // Checking if the target was focused
+                                return false;
+                            } else {
+                                $target.attr('tabindex', '-1'); // Adding tabindex for elements not focusable
+                                $target.focus(); // Set focus again
+                            };
+                        });
+                    }
+                }
+            });
+        },
 
-		fancyScripts: function fancyScripts() {
-			$('[data-fancybox="gallery"]').fancybox({
-				loop: false,
-				gutter: 50,
-				keyboard: true,
-				preventCaptionOverlap: true,
-				arrows: true,
-				infobar: true,
-				buttons: ["zoom",
-				//"share",
-				"slideShow",
-				//"fullScreen",
-				"download", "thumbs", "close"]
-			});
-		}
-	};
+        fancyScripts: function fancyScripts() {
+            $('[data-fancybox="gallery"]').fancybox({
+                loop: false,
+                gutter: 50,
+                keyboard: true,
+                preventCaptionOverlap: true,
+                arrows: true,
+                infobar: true,
+                buttons: ["zoom",
+                //"share",
+                "slideShow",
+                //"fullScreen",
+                "download", "thumbs", "close"]
+            });
+        }
+    };
 
-	// -- Home -- //
-	var $HomeScope = {
+    // -- Home -- //
+    var $HomeScope = {
 
-		// Constructor
-		init: function init() {
-			// Instance functions
-			this.homeSlider();
-			this.newsSlider();
-			this.timeSlider();
-			this.homeCounter();
-		},
+        // Constructor
+        init: function init() {
+            // Instance functions
+            this.homeSlider();
+            this.newsSlider();
+            this.timeSlider();
+            this.homeCounter();
+        },
 
-		// scripts for banner
-		homeSlider: function homeSlider() {
-			var slider_wrapper = $('.slider-wrapper');
-			var slick_settings = {
-				dots: false,
-				arrows: true,
-				infinite: true,
-				autoplay: true,
-				autoplaySpeed: 6000,
-				speed: 300,
-				slidesToShow: 1,
-				slidesToScroll: 1,
-				adaptiveHeight: true
-			};
+        // scripts for banner
+        homeSlider: function homeSlider() {
+            var slider_wrapper = $('.slider-wrapper');
+            var slick_settings = {
+                dots: false,
+                arrows: true,
+                infinite: true,
+                autoplay: true,
+                autoplaySpeed: 6000,
+                speed: 300,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                adaptiveHeight: true
+            };
 
-			if (!slider_wrapper.hasClass('slick-initialized')) {
-				var slick_slider = slider_wrapper.slick(slick_settings);
-			}
-		},
+            if (!slider_wrapper.hasClass('slick-initialized')) {
+                var slick_slider = slider_wrapper.slick(slick_settings);
+            }
 
-		// scripts for news
-		newsSlider: function newsSlider() {
-			var slider_wrapper = $('.home-news--wrapper');
-			var slick_settings = {
-				dots: false,
-				arrows: true,
-				slidesToShow: 3,
-				infinite: false,
-				slidesToScroll: 3,
-				responsive: [{
-					breakpoint: 680,
-					settings: {
-						slidesToShow: 1,
-						slidesToScroll: 1
-					}
-				}]
-			};
+            // Areas home
+            var slider_areas = $('.areas-home'),
+                areas_params = {
+                dots: true,
+                autoplay: true,
+                autoplaySpeed: 6000,
+                arrows: false,
+                infinite: false,
+                speed: 300,
+                slidesToShow: 6,
+                slidesToScroll: 6
+            };
 
-			if (!slider_wrapper.hasClass('slick-initialized')) {
-				var slick_slider = slider_wrapper.slick(slick_settings);
-			}
-		},
+            if (!slider_areas.hasClass('slick-initialized')) {
+                if ($(window).innerWidth() >= 720) {
+                    slider_areas.slick(areas_params);
+                } else {
+                    slider_areas.slick();
+                }
+            }
+        },
 
-		// scripts for history
-		timeSlider: function timeSlider() {
-			var slider_wrapper = $('.time--numbers');
-			var time_items = slider_wrapper.find('.time--number');
-			var time_tab = $('.time---detail');
-			var numbersball = time_items.find('.time--holder');
+        // scripts for news
+        newsSlider: function newsSlider() {
+            var slider_wrapper = $('.home-news--wrapper');
+            var slick_settings = {
+                dots: false,
+                arrows: true,
+                slidesToShow: 3,
+                infinite: false,
+                slidesToScroll: 3,
+                responsive: [{
+                    breakpoint: 680,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                }]
+            };
 
-			var slick_settings = {
-				dots: false,
-				arrows: true,
-				slidesToShow: 6,
-				infinite: false,
-				slidesToScroll: 6,
-				accessibility: false,
-				responsive: [{
-					breakpoint: 680,
-					settings: {
-						slidesToShow: 1,
-						slidesToScroll: 1
-					}
-				}]
-			};
+            if (!slider_wrapper.hasClass('slick-initialized')) {
+                var slick_slider = slider_wrapper.slick(slick_settings);
+            }
+        },
 
-			if (!slider_wrapper.hasClass('slick-initialized')) {
-				var slick_slider = slider_wrapper.slick(slick_settings);
-			}
+        // scripts for history
+        timeSlider: function timeSlider() {
+            var slider_wrapper = $('.time--numbers');
+            var time_items = slider_wrapper.find('.time--number');
+            var time_tab = $('.time---detail');
+            var numbersball = time_items.find('.time--holder');
 
-			if (time_items) {
-				time_items.each(function (index, el) {
-					var instance = $(this);
-					var yearclick = instance.data('year');
-					var yearcolor = instance.data('color');
-					var numberball = instance.find('.time--holder');
+            var slick_settings = {
+                dots: false,
+                arrows: true,
+                slidesToShow: 6,
+                infinite: false,
+                slidesToScroll: 6,
+                accessibility: false,
+                responsive: [{
+                    breakpoint: 680,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                }]
+            };
 
-					instance.click(function (event) {
-						/* Act on the event */
-						time_items.removeClass('active');
-						time_tab.css('display', 'none');
-						numbersball.css('background-color', '#f6f6f6');
+            if (!slider_wrapper.hasClass('slick-initialized')) {
+                var slick_slider = slider_wrapper.slick(slick_settings);
+            }
 
-						instance.addClass('active');
-						$('.time--details').find("[data-year=" + yearclick + "]").css({
-							'display': 'block',
-							'background-color': yearcolor
-						});
-						numberball.css('background-color', yearcolor);
-					});
-				});
-			}
-		},
+            if (time_items) {
+                time_items.each(function (index, el) {
+                    var instance = $(this);
+                    var yearclick = instance.data('year');
+                    var yearcolor = instance.data('color');
+                    var numberball = instance.find('.time--holder');
 
-		// scripts for counter
-		homeCounter: function homeCounter() {
+                    instance.click(function (event) {
+                        /* Act on the event */
+                        time_items.removeClass('active');
+                        time_tab.css('display', 'none');
+                        numbersball.css('background-color', '#f6f6f6');
 
-			var numberItems = $('.numbers--item');
+                        instance.addClass('active');
+                        $('.time--details').find("[data-year=" + yearclick + "]").css({
+                            'display': 'block',
+                            'background-color': yearcolor
+                        });
+                        numberball.css('background-color', yearcolor);
+                    });
+                });
+            }
+        },
 
-			$('.counter').counterUp({
-				delay: 10,
-				separator: '.',
-				time: 1500
-			});
+        // scripts for counter
+        homeCounter: function homeCounter() {
 
-			if (numberItems) {
-				numberItems.each(function (index, el) {
-					var instance = $(this);
-					var numberItem = instance.find('h4');
-				});
-			}
-		}
-	};
+            var numberItems = $('.numbers--item');
 
-	// -- Press -- //
-	var $PressScope = {
+            $('.counter').counterUp({
+                delay: 10,
+                separator: '.',
+                time: 1500
+            });
 
-		// Constructor
-		init: function init() {
-			// Instance functions
-			this.videoSlider();
-			this.gallerySlider();
-		},
+            if (numberItems) {
+                numberItems.each(function (index, el) {
+                    var instance = $(this);
+                    var numberItem = instance.find('h4');
+                });
+            }
+        }
+    };
 
-		// Scripts Video
-		videoSlider: function videoSlider() {
-			var slider_wrapper = $('.video-news--wrapper');
-			var slick_settings = {
-				dots: false,
-				arrows: true,
-				slidesToShow: 3,
-				infinite: false,
-				slidesToScroll: 3,
-				responsive: [{
-					breakpoint: 680,
-					settings: {
-						slidesToShow: 1,
-						slidesToScroll: 1
-					}
-				}]
-			};
+    // -- Press -- //
+    var $PressScope = {
 
-			if (!slider_wrapper.hasClass('slick-initialized')) {
-				var slick_slider = slider_wrapper.slick(slick_settings);
-			}
-		},
+        // Constructor
+        init: function init() {
+            // Instance functions
+            this.videoSlider();
+            this.gallerySlider();
+        },
 
-		// Scripts Gallery
-		gallerySlider: function gallerySlider() {
-			var slider_wrapper = $('.gallery-news--wrapper');
-			var slick_settings = {
-				dots: false,
-				arrows: true,
-				slidesToShow: 4,
-				infinite: false,
-				slidesToScroll: 4,
-				responsive: [{
-					breakpoint: 680,
-					settings: {
-						slidesToShow: 1,
-						slidesToScroll: 1
-					}
-				}]
-			};
+        // Scripts Video
+        videoSlider: function videoSlider() {
+            var slider_wrapper = $('.video-news--wrapper');
+            var slick_settings = {
+                dots: false,
+                arrows: true,
+                slidesToShow: 3,
+                infinite: false,
+                slidesToScroll: 3,
+                responsive: [{
+                    breakpoint: 680,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                }]
+            };
 
-			if (!slider_wrapper.hasClass('slick-initialized')) {
-				var slick_slider = slider_wrapper.slick(slick_settings);
-			}
-		}
-	};
+            if (!slider_wrapper.hasClass('slick-initialized')) {
+                var slick_slider = slider_wrapper.slick(slick_settings);
+            }
+        },
 
-	// -- Map -- //
-	var $MapScope = {
-		// Constructor
-		init: function init() {
-			this.mapScripts();
-		},
+        // Scripts Gallery
+        gallerySlider: function gallerySlider() {
+            var slider_wrapper = $('.gallery-news--wrapper');
+            var slick_settings = {
+                dots: false,
+                arrows: true,
+                slidesToShow: 4,
+                infinite: false,
+                slidesToScroll: 4,
+                responsive: [{
+                    breakpoint: 680,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                }]
+            };
 
-		mapScripts: function mapScripts() {
-			var map = L.map('mapid', {
-				center: [4.632, -74.299],
-				zoom: 6
-			});
+            if (!slider_wrapper.hasClass('slick-initialized')) {
+                var slick_slider = slider_wrapper.slick(slick_settings);
+            }
+        }
+    };
 
-			var gl = L.mapboxGL({
-				attribution: '<a href="https://www.maptiler.com/copyright/" target="_blank">© MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">© OpenStreetMap contributors</a>',
-				accessToken: 'no-token',
-				style: 'https://api.maptiler.com/maps/070eadaf-a6cd-45ba-b39b-d2c301279159/style.json?key=4ByPNrAy6wHbEZdnwieo'
-			}).addTo(map);
+    // -- Map -- //
+    var $MapScope = {
+        // Constructor
+        init: function init() {
+            this.mapScripts();
+        },
 
-			// Set sidebar
-			var sidebar = L.control.sidebar('sidebar', {
-				closeButton: true,
-				position: 'left'
-			});
+        mapScripts: function mapScripts() {
+            var map = L.map('mapid', {
+                center: [4.632, -74.299],
+                zoom: 6
+            });
 
-			map.addControl(sidebar);
+            var gl = L.mapboxGL({
+                attribution: '<a href="https://www.maptiler.com/copyright/" target="_blank">© MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">© OpenStreetMap contributors</a>',
+                accessToken: 'no-token',
+                style: 'https://api.maptiler.com/maps/070eadaf-a6cd-45ba-b39b-d2c301279159/style.json?key=4ByPNrAy6wHbEZdnwieo'
+            }).addTo(map);
 
-			// Set markers
-			var MarkerPointer = $('#mapMarkers li');
+            // Set sidebar
+            var sidebar = L.control.sidebar('sidebar', {
+                closeButton: true,
+                position: 'left'
+            });
 
-			if (MarkerPointer) {
-				MarkerPointer.each(function (index, el) {
-					var instance = $(this);
-					// Mav item vars
-					var latLen = instance.data('lat-len');
-					var itemTitle = instance.data('name');
-					var itemBody = instance.html();
+            map.addControl(sidebar);
 
-					var latSplited = latLen.split(",");
-					var Lat = parseFloat(latSplited[0]);
-					var Len = parseFloat(latSplited[1]);
-					var div_circle = L.divIcon({ className: 'circle' });
+            // Set markers
+            var MarkerPointer = $('#mapMarkers li');
 
-					console.log('latLen', Lat, Len);
+            if (MarkerPointer) {
+                MarkerPointer.each(function (index, el) {
+                    var instance = $(this);
+                    // Mav item vars
+                    var latLen = instance.data('lat-len');
+                    var itemTitle = instance.data('name');
+                    var itemBody = instance.html();
 
-					var markerItem = L.marker([Lat, Len], { icon: div_circle }).addTo(map).on('click', function () {
-						$('#sidebar').html('');
-						sidebar.toggle();
-						$('#sidebar').html('<h2>' + itemTitle + '</h2>' + itemBody);
-					});
-				});
-			}
+                    var latSplited = latLen.split(",");
+                    var Lat = parseFloat(latSplited[0]);
+                    var Len = parseFloat(latSplited[1]);
+                    var div_circle = L.divIcon({ className: 'circle' });
 
-			map.on('click', function () {
-				sidebar.hide();
-			});
-		}
-	};
+                    console.log('latLen', Lat, Len);
 
-	// -- Events -- //
-	var $eventScope = {
-		// Constructor
-		init: function init() {
-			this.popScripts();
-		},
+                    var markerItem = L.marker([Lat, Len], { icon: div_circle }).addTo(map).on('click', function () {
+                        $('#sidebar').html('');
+                        sidebar.toggle();
+                        $('#sidebar').html('<h2>' + itemTitle + '</h2>' + itemBody);
+                    });
+                });
+            }
 
-		popScripts: function popScripts() {
-			var popItems = $('.event-ponents-item');
+            map.on('click', function () {
+                sidebar.hide();
+            });
+        }
+    };
 
-			if (popItems) {
-				popItems.each(function (index, el) {
-					var instance = $(this);
-					var imageWrapper = instance.find('img');
-					var captionPop = instance.find('.event-ponents-item-caption');
+    // -- Events -- //
+    var $eventScope = {
+        // Constructor
+        init: function init() {
+            this.popScripts();
+        },
 
-					instance.click(function (event) {
-						/* Act on the event */
-						$.fancybox.open('<div class="modalmessage"><figure><img src="' + imageWrapper.attr('src') + '"></figure><div class="caption">' + captionPop.html() + '</div></div>');
-					});
-				});
-			}
-		}
-	};
+        popScripts: function popScripts() {
+            var popItems = $('.event-ponents-item');
 
-	// -- Landing -- //
-	var $LandingScope = {
+            if (popItems) {
+                popItems.each(function (index, el) {
+                    var instance = $(this);
+                    var imageWrapper = instance.find('img');
+                    var captionPop = instance.find('.event-ponents-item-caption');
 
-		// Constructor
-		init: function init() {
-			// Instance functions
-			this.videoSlider();
-			this.gallerySlider();
-		},
+                    instance.click(function (event) {
+                        /* Act on the event */
+                        $.fancybox.open('<div class="modalmessage"><figure><img src="' + imageWrapper.attr('src') + '"></figure><div class="caption">' + captionPop.html() + '</div></div>');
+                    });
+                });
+            }
+        }
+    };
 
-		// Scripts Video
-		videoSlider: function videoSlider() {
-			var slider_wrapper = $('.video-news--wrapper');
-			var slick_settings = {
-				dots: false,
-				arrows: true,
-				slidesToShow: 3,
-				infinite: false,
-				slidesToScroll: 3,
-				responsive: [{
-					breakpoint: 680,
-					settings: {
-						slidesToShow: 1,
-						slidesToScroll: 1
-					}
-				}]
-			};
+    // -- Landing -- //
+    var $LandingScope = {
 
-			if (!slider_wrapper.hasClass('slick-initialized')) {
-				var slick_slider = slider_wrapper.slick(slick_settings);
-			}
-		},
+        // Constructor
+        init: function init() {
+            // Instance functions
+            this.videoSlider();
+            this.gallerySlider();
+        },
 
-		// Scripts Gallery
-		gallerySlider: function gallerySlider() {
-			var slider_wrapper = $('.gallery-landing--wrapper');
-			var slick_settings = {
-				dots: false,
-				arrows: true,
-				slidesToShow: 4,
-				infinite: false,
-				slidesToScroll: 4,
-				responsive: [{
-					breakpoint: 680,
-					settings: {
-						slidesToShow: 1,
-						slidesToScroll: 1
-					}
-				}]
-			};
+        // Scripts Video
+        videoSlider: function videoSlider() {
+            var slider_wrapper = $('.video-news--wrapper');
+            var slick_settings = {
+                dots: false,
+                arrows: true,
+                slidesToShow: 3,
+                infinite: false,
+                slidesToScroll: 3,
+                responsive: [{
+                    breakpoint: 680,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                }]
+            };
 
-			if (!slider_wrapper.hasClass('slick-initialized')) {
-				var slick_slider = slider_wrapper.slick(slick_settings);
-			}
-		}
-	};
+            if (!slider_wrapper.hasClass('slick-initialized')) {
+                var slick_slider = slider_wrapper.slick(slick_settings);
+            }
+        },
 
-	// -- Event Congress -- //
-	var $congressScope = {
-		// Constructor
-		init: function init() {
-			this.ponentsCarousel();
-		},
+        // Scripts Gallery
+        gallerySlider: function gallerySlider() {
+            var slider_wrapper = $('.gallery-landing--wrapper');
+            var slick_settings = {
+                dots: false,
+                arrows: true,
+                slidesToShow: 4,
+                infinite: false,
+                slidesToScroll: 4,
+                responsive: [{
+                    breakpoint: 680,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                }]
+            };
 
-		ponentsCarousel: function ponentsCarousel() {
-			var eventWrapper = $('.areas');
+            if (!slider_wrapper.hasClass('slick-initialized')) {
+                var slick_slider = slider_wrapper.slick(slick_settings);
+            }
+        }
+    };
 
-			if (eventWrapper.length > 0) {
-				var slick_settings = {
-					dots: false,
-					arrows: true,
-					slidesToShow: 4,
-					slidesToScroll: 4,
-					accessibility: false,
-					responsive: [{
-						breakpoint: 680,
-						settings: {
-							slidesToShow: 1,
-							slidesToScroll: 1
-						}
-					}]
-				};
+    // -- Event Congress -- //
+    var $congressScope = {
+        // Constructor
+        init: function init() {
+            this.ponentsCarousel();
+        },
 
-				if (!eventWrapper.hasClass('slick-initialized')) {
-					var eventWrapperSlider = eventWrapper.slick(slick_settings);
-				}
-			}
-		}
-	};
+        ponentsCarousel: function ponentsCarousel() {
+            var eventWrapper = $('.areas');
 
-	// Trigger
-	$GeneralScope.init();
+            if (eventWrapper.length > 0) {
+                var slick_settings = {
+                    dots: false,
+                    arrows: true,
+                    slidesToShow: 4,
+                    slidesToScroll: 4,
+                    accessibility: false,
+                    responsive: [{
+                        breakpoint: 680,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1
+                        }
+                    }]
+                };
 
-	// Home Scripts
-	if ($('body').hasClass('home')) {
-		$HomeScope.init();
-	}
+                if (!eventWrapper.hasClass('slick-initialized')) {
+                    var eventWrapperSlider = eventWrapper.slick(slick_settings);
+                }
+            }
+        }
+    };
 
-	// Press / Blog Scripts
-	if ($('body').hasClass('page-template-templates_prensa-tpl-php') || $('body').hasClass('single-post')) {
-		$PressScope.init();
-	}
+    // Trigger
+    $GeneralScope.init();
 
-	// Map Scripts
-	if ($('body').hasClass('page-template-_map-tpl')) {
-		$MapScope.init();
-	}
+    // Home Scripts
+    if ($('body').hasClass('home')) {
+        $HomeScope.init();
+    }
 
-	// Event Single
-	if ($('body').hasClass('single-eventos')) {
-		$eventScope.init();
-	}
+    // Press / Blog Scripts
+    if ($('body').hasClass('page-template-templates_prensa-tpl-php') || $('body').hasClass('single-post')) {
+        $PressScope.init();
+    }
 
-	// Landing Scripts
-	if ($('body').hasClass('page-template-templates_landing-tpl-php')) {
-		$LandingScope.init();
-	}
+    // Map Scripts
+    if ($('body').hasClass('page-template-_map-tpl')) {
+        $MapScope.init();
+    }
 
-	if ($('body').hasClass('page-template-templates_congreso-tpl-php')) {
-		$eventScope.init();
-		$congressScope.init();
-	}
-	if ($('body').hasClass('areas')) {
-		$eventScope.init();
-		$congressScope.init();
-	}
+    // Event Single
+    if ($('body').hasClass('single-eventos')) {
+        $eventScope.init();
+    }
+
+    // Landing Scripts
+    if ($('body').hasClass('page-template-templates_landing-tpl-php')) {
+        $LandingScope.init();
+    }
+
+    if ($('body').hasClass('page-template-templates_congreso-tpl-php')) {
+        $eventScope.init();
+        $congressScope.init();
+    }
+    if ($('body').hasClass('areas')) {
+        $eventScope.init();
+        $congressScope.init();
+    }
 })(jQuery);
 
 /***/ }),

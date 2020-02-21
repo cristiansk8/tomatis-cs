@@ -1,31 +1,29 @@
-.areasHome{
-  text-align: center;
-  position: relative;
-  &--caption{
-      width: 100%;
-    	text-align: center;
-    	display: block;
-      @include mq('md') {
-        width: 20%;
-      }
-      h3{
-        padding: rem(20px);
-        color:$white;
-        min-height: 150px;
-        padding-top: 45px;
-      }
+.areasHome {
+    text-align: center;
+    position: relative;
+    &--caption {
+        text-align: center;
+        display: block;
+        a {
+            display: block;
+        }
+        h3 {
+            padding: rem(20px);
+            color: $white;
+            min-height: 150px;
+            padding-top: 45px;
+        }
         img {
-          margin-top: -50px;
-          text-align: center;
-          display: inline-block;
-          padding: rem(10px);
-          @include mq('md') {
+            margin-top: -50px;
             text-align: center;
             display: inline-block;
-            max-width: 130px;
-            height: auto;
-          }
+            padding: rem(10px);
+            @include mq('md') {
+                text-align: center;
+                display: inline-block;
+                max-width: 130px;
+                height: auto;
+            }
         }
-
-}
+    }
 }
