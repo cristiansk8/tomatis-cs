@@ -97,12 +97,14 @@
 		height: rem(40px);
 		z-index: 2;
 		&.slick-prev {
+			background-size: 55px !important;
 			left: rem(25px);
-			@include iconBg('../images/icons/chevron-left.png', 26px);
+			@include iconBg('../images/icons/2-a.png', 26px);
 		}
 		&.slick-next {
+			background-size: 55px !important;
 			right: rem(25px);
-			@include iconBg('../images/icons/chevron-right.png', 26px);
+			@include iconBg('../images/icons/2-b.png', 26px);
 		}
 	}
 }

@@ -27,9 +27,10 @@
 					$cont++;
 			?>
 			<div class="videos-item">
-	
+
 				<a  class="images" data-fancybox-type="iframe" href="https://www.youtube.com/embed/<?php echo $yt_id; ?>"data-fancybox="gallery">
-	<img src="https://i.ytimg.com/vi/<?php echo $yt_id; ?>/hqdefault.jpg" alt="" width="100%" height="auto">
+	<img class="imagen"src="https://i.ytimg.com/vi/<?php echo $yt_id; ?>/hqdefault.jpg" alt="" width="100%" height="auto">
+
 	<div class="video-news--caption">
 		<p>
 			<?php the_title(); ?>
@@ -48,5 +49,13 @@
 		</div>
 
 	</div>
-
+	<div class="videos-container">
+		<div class="tittle-videos">
+			<h2>Audios</h2>
+			<hr>
+			<iframe src="//alacarta.caracol.com.co/widget/audio/097RD130000001078343/" width="100%" height="102" frameborder="0" allowfullscreen></iframe>
+			<iframe src="//alacarta.caracol.com.co/widget/audio/097RD010000000468480/" width="100%" height="102" frameborder="0" allowfullscreen></iframe>
+			<iframe src="//alacarta.caracol.com.co/widget/audio/097RD130000001005936/" width="100%" height="102" frameborder="0" allowfullscreen></iframe>
+		</div>
+	</div>
 </section>

@@ -26,9 +26,9 @@
 				$cont++;
 			 ?>
 
-			<div class="slider--item" style="background-image:url(<?php echo $slider_item; ?>)">
-
-					<div class="slider--caption">
+			<div class="slider--item">
+				<img src="<?php echo $slider_item; ?>" alt=""width="100%" height="auto">
+					<div class="slider--caption" style="display:none">
 						<?php if($big_text): ?>
 						<h1><?php echo $big_text; ?></h1>
 					<?php endif; ?>

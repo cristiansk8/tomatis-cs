@@ -1,4 +1,19 @@
 .navbar {
+	.container-fluid{
+		.navbar-header{
+			a{
+				img{
+					width: 87px;
+					height: auto;
+					@include mq('md'){
+						width: 170px;
+						height: auto;
+					}
+				}
+			}
+		}
+	}
+	height: 70px;
 	margin: 0 0 0 0;
 	border: none;
 	background-color: $white;
@@ -50,6 +65,7 @@
 			vertical-align: middle;
 			float: none;
 			margin-left: rem(13px);
+			top: -50px;
 		}
 		// Menu
 		ul {

@@ -118,14 +118,10 @@
             // Areas home
             const slider_areas = $('.areas-home'),
                 areas_params = {
-                    dots: true,
-                    autoplay: true,
-                    autoplaySpeed: 6000,
-                    arrows: false,
+                    dots: false,
+                    arrows: true,
                     infinite: false,
-                    speed: 300,
                     slidesToShow: 6,
-                    slidesToScroll: 6,
                     responsive: [{
                             breakpoint: 1024,
                             settings: {
@@ -151,6 +147,11 @@
                 }
 
             if (!slider_areas.hasClass('slick-initialized')) {
+              if ($(window).innerWidth() >= 720) {
+                    slider_areas.slick(areas_params);
+                } else {
+                    slider_areas.slick();
+                }
                 slider_areas.slick(areas_params);
             }
 

@@ -12,7 +12,11 @@
 
 		get_template_part('includes/home/bl-info');
 
-		get_template_part('includes/home/ubicacion');
+		get_template_part('includes/home/fases');
+
+		get_template_part('includes/home/formulario');
+
+		get_template_part('includes/home/banner-descubre');
 
 		get_template_part('includes/loops/loop-testimonios');
 

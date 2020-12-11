@@ -17,6 +17,40 @@ section {
         flex-wrap: wrap;
     }
     &--item {
+      .equipo{
+        padding: rem(50px) rem(10px);
+        @include mq('md') {
+        padding: rem(30px) rem(100px);
+      	display: flex;
+      	flex-wrap: wrap;
+
+      }
+      &--item{
+        display: block;
+        text-align: center;
+        padding: rem(10px) rem(50px);
+        @include mq('md') {
+          width: 49.9%;
+          padding: rem(30px) rem(20px);
+          h2{
+            text-align: left;
+            color: $azul-medio;
+          }
+          .descripcion{
+            text-align: left;
+          }
+        }
+        p{
+          span{
+            img {
+              padding: 5%;
+              width: 70px;
+              height: auto;
+            }
+          }
+        }
+      }
+      }
         display: block;
         @include mq('md') {
             width: 49.9%;

@@ -18,6 +18,7 @@
                 color: $white;
                 min-height: 150px;
                 padding-top: 45px;
+                font-size: 19px;
             }
             img {
                 top: -50px;
@@ -33,5 +34,18 @@
                 }
             }
         }
+    }
+    .slick-arrow {
+      width: rem(56px);
+      height: rem(50px);
+      z-index: 2;
+      &.slick-prev {
+        left: rem(25px);
+        @include iconBg('../images/icons/1-a.png', 55px);
+      }
+      &.slick-next {
+        right: rem(25px);
+        @include iconBg('../images/icons/1-b.png', 55px);
+      }
     }
 }

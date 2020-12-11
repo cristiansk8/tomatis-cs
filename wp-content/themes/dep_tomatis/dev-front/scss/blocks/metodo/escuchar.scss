@@ -22,7 +22,6 @@ shape-margin: 20px;
 float: right;
 }
       .block-1{
-        text-align: center;
         padding: rem(15px) rem(22px);
 
         @include mq('md') {
@@ -107,7 +106,7 @@ float: right;
 
                 @include mq('md') {
                   padding: rem(45px) rem(96px);
-                  text-align: left;
+                  text-align: justify;
                 }
               }
       }
@@ -169,7 +168,7 @@ float: right;
 
                 @include mq('md') {
                   padding: rem(15px) rem(96px);
-                  text-align: left;
+                  text-align: justify;
                 }
               }
       }

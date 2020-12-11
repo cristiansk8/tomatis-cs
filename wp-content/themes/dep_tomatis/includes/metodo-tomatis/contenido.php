@@ -19,8 +19,10 @@ if ( $parent->have_posts() ) : ?>
         <ul class="nav nav-pills categorias__wrapper-pills">
    <?php
    $cont =0;
+   $tab =0;
    while ( $parent->have_posts() ) : $parent->the_post();
    $cont ++;
+   $tab ++;
         // Featured image
         // $feat_image = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), "full", true);
    ?>
@@ -42,15 +44,17 @@ if ( $parent->have_posts() ) : ?>
     <div class="tab-content categorias__wrapper-tabs">
       <?php
       $cont =0;
+      $tab =0;
       $active='in active';
       while ( $parent->have_posts() ) : $parent->the_post();
       $cont ++;
+      $tab ++;
            // Featured image
            // $feat_image = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), "full", true);
       ?>
       <?php if ($cont==1): ?>
             <div id="menu<?php echo $cont;  ?>" class="tab-pane fade  <?php echo $active; ?>">
-              <div class="categorias__wrapper-tabs__item categoria-item <?php the_title(); ?>">
+              <div class="categorias__wrapper-tabs__item categoria-item <?php the_title(); ?>" id="tab<?php echo $tab;  ?>">
                 <div class="categoria-infografia">
 
                     <?php the_content(); ?>
@@ -59,7 +63,7 @@ if ( $parent->have_posts() ) : ?>
             </div>
            <?php else: ?>
              <div id="menu<?php echo $cont;  ?>" class="tab-pane fade">
-               <div class="categorias__wrapper-tabs__item categoria-item <?php the_title(); ?>">
+               <div class="categorias__wrapper-tabs__item categoria-item <?php the_title(); ?>" id="tab<?php echo $tab;  ?>">
                  <div class="categoria-infografia">
 
                      <?php the_content();?>

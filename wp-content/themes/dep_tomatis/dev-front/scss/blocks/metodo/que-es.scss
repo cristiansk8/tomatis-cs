@@ -3,12 +3,11 @@
   .categoria-infografia{
     .metodo1 {
       .block-1{
-        text-align: center;
         padding: rem(15px) rem(22px);
 
         @include mq('md') {
           padding: rem(45px) rem(96px);
-          text-align: left;
+          text-align: justify;
         }
         h2{
           color: $azul-medio;
@@ -30,7 +29,6 @@
       }
       .block-2{
         background-color: $gris-trasparente;
-        text-align: center;
         padding: rem(15px) rem(22px);
 
         @include mq('md') {
@@ -103,7 +101,6 @@
                 background-color: $gris-trasparente;
               }
               &--caption{
-                text-align: center;
                 padding: rem(15px) rem(22px);
 
                 @include mq('md') {

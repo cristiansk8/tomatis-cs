@@ -14,6 +14,21 @@ section{
       border-top: .2rem solid #1aa7b3;
     }
   }
+  .slick-arrow {
+    width: rem(26px);
+    height: rem(40px);
+    z-index: 2;
+    &.slick-prev {
+      background-size: 55px !important;
+      left: rem(25px);
+      @include iconBg('../images/icons/2-a.png', 26px);
+    }
+    &.slick-next {
+      background-size: 55px !important;
+      right: rem(25px);
+      @include iconBg('../images/icons/2-b.png', 26px);
+    }
+  }
 }
 
 .videos{

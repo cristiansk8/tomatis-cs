@@ -28,7 +28,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="" href="<?php echo home_url('/'); ?>"> <img src="../wp-content/themes/dep_tomatis/img/logos/logonew.png'" alt="" width="130px" height="auto"> </a>
+      <a class="" href="<?php echo home_url('/'); ?>"> <img src="https://tomatis.com.co/wp-content/uploads/2020/10/LOGO_2_1.png" alt="logo-asocajas" > </a>
     </div>
     <div class="collapse navbar-collapse col-md-9" id="navbar">
       <?php

@@ -18,7 +18,7 @@ $query = new WP_Query($args);
 <section>
   <div class="tittle-testimonios">
     <header>
-      <h2>Testimonios</h2>
+      <h2>Mi experiencia con Tomatis</h2>
     </header>
   </div>
   <div class="slider-prod testimonios">
@@ -29,7 +29,7 @@ $query = new WP_Query($args);
 
   ?>
     <div class="testimonios--caption">
-    
+
       <?php the_content(); ?>
     </div>
   <?php endwhile;

@@ -10,8 +10,4 @@
 
 		get_template_part('includes/quienes-somos/info');
 
-		get_template_part('includes/quienes-somos/equipo');
-
-		get_template_part('includes/loops/loop-testimonios');
-
 	get_template_part('includes/footer');
